@@ -169,6 +169,11 @@ img { max-width: 100%; }
 	float: right;
 }
 
+.man-info{
+	color: #888;
+	float: right;
+}
+
 
 /***** Media queries *****/
 

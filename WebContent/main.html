@@ -11,13 +11,45 @@
         <link rel="stylesheet" href="assets2/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="assets2/css/form-elements.css">
         <link rel="stylesheet" href="assets2/css/style.css">
-
+		<link rel="stylesheet" type="text/css" href="main.css">
         <!-- Favicon and touch icons -->
         <link rel="shortcut icon" href="assets/ico/favicon.png">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets2/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets2/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets2/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="assets2/ico/apple-touch-icon-57-precomposed.png">
+
+<style>
+.all {
+	height: 100%;
+	width: 2000px;
+}
+.up-div{
+	height: 150px;
+	width: 100%;
+	float:left;
+}
+.left-div {
+	height: 100%;
+	width: 360px;
+	float:left;
+}
+.zuijin-fangke{
+	height: 300px;
+	width: 200px;
+}
+.xingzuo-yunshi{
+	height: 300px;
+	width: 200px;
+}
+.center-div {
+	height: 100%;
+	width: 1200px;
+	float:left;
+}
+</style>
+
+
 </head>
 <body>
 	<nav class="navbar navbar-inverse" role="navigation">
@@ -25,7 +57,7 @@
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">博客 </a>
 			</div>
-			<div>
+			<div style="line-height: 50px;">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">个人中心</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -38,25 +70,84 @@
 							<li><a href="#">留言板</a></li>
 							<li><a href="#">个人相册</a></li>
 							<li><a href="#">个人资料</a></li>
+							<li><a href="#">联系我们</a></li>
 						</ul></li>
 					<li><a href="#">写博客</a></li>
+					<li><a href="#">联系我们</a></li>
 				</ul>
-				<ul class="nav navbar-nav">
-					<li class="login"><a href="login.html">登录</a></li>
-					<li class="register"><a href="register.html">注册</a></li>
-					<li class="call"><a href="#">联系我们</a></li>
-
-				</ul>
+				<a href="#">登录</a>
+				<a href="#">注册</a>			
 			</div>
 		</div>
 	</nav>
-	
-	
-	 <!-- Javascript -->
-        <script src="assets2/js/jquery-1.11.1.min.js"></script>
-        <script src="assets2/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets2/js/jquery.backstretch.min.js"></script>
-        <script src="assets2/js/scripts.js"></script>
 
+	<div class="all">
+		<div class="up-div" style="background-color: black">
+			<div class="man-info">
+				<div style="width:30px;height:150px;background-color:Black;float:left">
+				</div>
+				
+				<div class="headimage" style="width:150px;height:150px;float:left">					
+						<img src="image/headimage.png" alt="占位符缩略图">
+				</div>
+
+				<div style="width:30px;height:150px;background-color:Black;float:left">
+				</div>  
+
+				<div class="caption" align="center">
+					<h3>用户名</h3>
+					<p>个性签名</p>
+					<p>
+						<a href="#" class="btn btn-primary" role="button"> 加为好友 </a> <a
+							href="#" class="btn btn-default" role="button"> 收藏用户 </a>
+					</p>
+				</div>
+			</div>
+		</div>
+	
+		<div class="left-div" style="background-color: yellow">
+			
+			<div style="height:50px;width:360px;background-color:red;float:left"></div>
+			
+			
+			<div style="height:300px;width:80px;background-color:Black;float:left"></div>
+			<div class="zuijin-fangke" style="background-color: green;float:left">
+				最近访客
+			</div>
+			<div style="height:300px;width:80px;background-color:Black;float:left"></div>
+			
+
+			<div style="height:50px;width:360px;background-color:red;float:left"></div>
+			
+			
+			<div style="height:300px;width:80px;background-color:Black;float:left"></div>
+			<div class="xingzuo-yunshi" style="background-color: blue;float:left">
+				星座运势
+			</div>
+			<div style="height:300px;width:80px;background-color:Black;float:left"></div>
+		</div>
+		<div style="height: 100%;width:50px;float:left;"></div>
+		<div style="height: 100px;width:100%;background-color: yellow;"></div>
+
+
+		
+		<div class="center-div">
+			<ul class="nav nav-pills nav-justified">
+				<li class="active"><a href="#">博客</a></li>
+				<li><a href="#">留言板</a></li>
+				<li><a href="#">相册</a></li>
+				<li><a href="#">个人资料</a></li>
+				<li><a href="#">文章管理</a></li>
+			</ul>
+			<div></div>
+		</div>
+
+	
+	</div>
+<!-- Javascript -->
+<script src="assets2/js/jquery-1.11.1.min.js"></script>
+<script src="assets2/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets2/js/jquery.backstretch.min.js"></script>
+<script src="assets2/js/scripts.js"></script>
 </body>
 </html>

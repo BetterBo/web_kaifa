@@ -2,17 +2,16 @@ package com.ququ.dbcon;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 /*
  * 数据库连接管理类
  */
 public class DBConnection {
 
-	public static final String URL="jdbc:sqlserver://127.0.0.1:1433;databasename=web_project";
-	public static final String DRIVER="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-	public static final String USER="sa";
-	public static final String PASSWORD="121258";
+	public static final String URL="jdbc:mysql://localhost:3306/project_web?useUnicode=true&characterEncoding=utf-8";
+	public static final String DRIVER="com.mysql.jdbc.Driver";
+	public static final String USER="root";
+	public static final String PASSWORD="xiaobo52011";
 	
 	static {
 		try {
@@ -31,7 +30,7 @@ public class DBConnection {
 		try {
 			con = DriverManager.getConnection(URL, USER, PASSWORD);
 			return con;
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;
@@ -42,7 +41,7 @@ public class DBConnection {
 	public static void closeConn(Connection con){
 		try {
 			con.close();
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			if(con!=null){
 				con = null;
 			}

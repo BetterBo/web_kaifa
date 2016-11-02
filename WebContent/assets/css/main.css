@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+
+.all {
+	height: 100%;
+	width: 1560px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.up-div{
+	height: 150px;
+	width: 100%;
+	float:left;
+}
+.left-div {
+	height: 100%;
+	width: 360px;
+	float:left;
+}
+.zuijin-fangke{
+	height: 300px;
+	width: 200px;
+}
+.xingzuo-yunshi{
+	height: 300px;
+	width: 200px;
+}
+.center-div {
+	height: 100%;
+	width: 1200px;
+	float:left;
+}

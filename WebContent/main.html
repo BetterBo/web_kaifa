@@ -7,47 +7,18 @@
 <!-- Javascript -->
          <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-        <link rel="stylesheet" href="assets2/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets2/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="assets2/css/form-elements.css">
-        <link rel="stylesheet" href="assets2/css/style.css">
-		<link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/blog-list.css">
         <!-- Favicon and touch icons -->
         <link rel="shortcut icon" href="assets/ico/favicon.png">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets2/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets2/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets2/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="assets2/ico/apple-touch-icon-57-precomposed.png">
-
-<style>
-.all {
-	height: 100%;
-	width: 2000px;
-}
-.up-div{
-	height: 150px;
-	width: 100%;
-	float:left;
-}
-.left-div {
-	height: 100%;
-	width: 360px;
-	float:left;
-}
-.zuijin-fangke{
-	height: 300px;
-	width: 200px;
-}
-.xingzuo-yunshi{
-	height: 300px;
-	width: 200px;
-}
-.center-div {
-	height: 100%;
-	width: 1200px;
-	float:left;
-}
-</style>
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
 
 </head>
@@ -82,19 +53,22 @@
 	</nav>
 
 	<div class="all">
-		<div class="up-div" style="background-color: black">
+		<div class="up-div">
 			<div class="man-info">
-				<div style="width:30px;height:150px;background-color:Black;float:left">
+				<div style="width:130px;height:150px;background-color:Black;float:left">
 				</div>
 				
-				<div class="headimage" style="width:150px;height:150px;float:left">					
+				
+				<div class="headimage" style="width:120px;height:120px;float:left">	
+					<div style="width:120px;height:20px;background-color:Black;float:left">
+					</div>				
 						<img src="image/headimage.png" alt="占位符缩略图">
 				</div>
 
 				<div style="width:30px;height:150px;background-color:Black;float:left">
 				</div>  
 
-				<div class="caption" align="center">
+				<div class="caption" style="float:left">
 					<h3>用户名</h3>
 					<p>个性签名</p>
 					<p>
@@ -127,11 +101,10 @@
 			<div style="height:300px;width:80px;background-color:Black;float:left"></div>
 		</div>
 		<div style="height: 100%;width:50px;float:left;"></div>
-		<div style="height: 100px;width:100%;background-color: yellow;"></div>
-
 
 		
 		<div class="center-div">
+			<div style="height:50px;width:100%;background-color:red;float:left"></div>
 			<ul class="nav nav-pills nav-justified">
 				<li class="active"><a href="#">博客</a></li>
 				<li><a href="#">留言板</a></li>
@@ -139,15 +112,104 @@
 				<li><a href="#">个人资料</a></li>
 				<li><a href="#">文章管理</a></li>
 			</ul>
-			<div></div>
+			
+			<!-- 中间主页展示div -->
+			<div class="center-show">
+				<!--  -->
+				<!-- 中间主页博客展示div -->
+				<div onclick="change_center-show(1)" class="center-show-blog;" style="display:none">
+					<div style="height:350px;width:200px;float:left;">
+						<p>文章分类</p>
+						<ul class="nav nav-pills nav-stacked">
+							<li class="active"><a href="#">全部</a></li>
+							<li><a href="#">编程</a></li>
+							<li><a href="#">情感</a></li>
+							<li><a href="#">美文</a></li>
+							<li><a href="#">教育</a></li>
+							<li><a href="#">美食</a></li>
+						</ul>
+					</div>
+					<div class="center-show-blog-content" style="height:100%;width:1000px;float:left;background-color:white;">
+						<dl class="blog_list clearfix">
+							<!-- 
+							<dt>
+								<a href="#"><img
+									src="image/headimage.png"
+									class="head"></a> <a href="http://blog.csdn.net/EthanWhite"
+									class="nickname">EthanWhite</a>
+							</dt>
+							 -->
+							<dd>
+								<h3 class="tracking-ad" data-mod="popu_254">
+									<a
+										href="#"
+										target="_blank">[类型]标题</a>
+								</h3>
+								<div class="blog_list_c">正文前50字...</div>
+								<div class="blog_list_b clearfix">
+									<div class="blog_list_b_l fl" style="float:left">
+										<span><i class="fa fa-list-ul"></i>类型一、类型二</span>
+									</div>
+									<div class="blog_list_b_r fr" style="float:right">
+										<label>最近修改时间</label><span><i class="fa fa-eye"></i><em>阅读量</em></span>
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				
+				
+				<!-- 中间主页留言板div -->
+				<div class="center-show-message board">
+					<div class="center-show-message board-man talk" style="height:300px;width:100%;float:left;">
+						这是我的个人主页留言板，大家来留言吧，哈哈哈~
+					</div>
+					<div style="height:30px;width:100%;float:left;background-color:black;"></div>
+					<div class="center-show-message_board-content" style="height:100%;width:100%;float:left;background-color:white;">
+
+						<div style="height:150px;width:150px;float:left">
+							<a href="#"><img
+									src="image/headimage.png"
+									class="head"></a> <a href="http://blog.csdn.net/EthanWhite"
+									class="nickname">EthanWhite</a>
+						</div>
+						<dl class="message_board clearfix" style="float:left">
+
+							<dd>
+								<h3 class="message_board-thing" data-mod="popu_254">
+									<a
+										href="#"
+										target="_blank">留言内容</a>
+								</h3>
+								<div class="blog_list_b clearfix">
+									<div class="blog_list_b_r fr" style="float:right">
+										<label>留言时间</label><span><i class="fa fa-eye"></i><em>阅读量</em></span>
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				
+				<!-- 中间主页个人相册div -->
+				<div class="center-show-xiangce">
+					
+				</div>
+				
+				<!-- 中间主页文章管理div -->
+				<div class="center-show-wenzhangguanli">
+					
+				</div>
+			</div>
 		</div>
 
 	
 	</div>
 <!-- Javascript -->
-<script src="assets2/js/jquery-1.11.1.min.js"></script>
-<script src="assets2/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets2/js/jquery.backstretch.min.js"></script>
-<script src="assets2/js/scripts.js"></script>
+<script src="assets/js/jquery-1.11.1.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.backstretch.min.js"></script>
+<script src="assets/js/mainscripts.js"></script>
 </body>
 </html>

@@ -1,10 +1,14 @@
 package com.ququ.bean;
 
 import java.util.Date;
-
+/**
+ * 个人信息
+ * @author bobobo
+ *
+ */
 public class UserInfoBean {
 	private int userId;
-	private int phoneNumber;
+	private String phoneNumber;
 	private String password;
 	private String headImage;
 	private String nickName;
@@ -17,10 +21,10 @@ public class UserInfoBean {
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	public String getPassword() {
@@ -64,7 +68,7 @@ public class UserInfoBean {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public UserInfoBean(int userId, int phoneNumber, String password,
+	public UserInfoBean(int userId, String phoneNumber, String password,
 			String headImage, String nickName, int score, Date createTime,
 			Date lastModifyTime) {
 		super();
